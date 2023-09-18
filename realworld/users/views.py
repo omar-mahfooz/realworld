@@ -42,6 +42,6 @@ class UserRegistrationAPIView(APIView):
 
 class UserViewSet(ViewSet):
     @action(detail=False, methods=['POST'])
-    def register(self, request):
+    def registration(self, request):
         user_registration_view = UserRegistrationAPIView.as_view()
         return user_registration_view(request=request)._data

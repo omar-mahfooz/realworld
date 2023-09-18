@@ -9,7 +9,7 @@ from django.urls import reverse
 from rest_framework.test import APIClient
 from rest_framework import status
 
-CREATE_USER_URL = reverse('register')
+CREATE_USER_URL = reverse('registration')
 
 def create_user(**params):
     """
@@ -28,7 +28,7 @@ class UserRegistrationTestCase(APITestCase):
             }
         }
         
-        response = self.client.post(reverse('register'), registration_data, format='json')
+        response = self.client.post(reverse('registration'), registration_data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         self.assertIn('user', response.data)

@@ -20,5 +20,5 @@ from django.urls import path
 from users.views import UserRegistrationAPIView
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/users", UserRegistrationAPIView.as_view(), name="register"),
+    path("api/users", UserRegistrationAPIView.as_view(), name="registration"),
 ]
