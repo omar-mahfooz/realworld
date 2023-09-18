@@ -9,15 +9,6 @@ from django.urls import reverse
 from rest_framework.test import APIClient
 from rest_framework import status
 
-CREATE_USER_URL = reverse('registration')
-
-def create_user(**params):
-    """
-    Create and return a new user.
-    """
-    return get_user_model.objects.create_user(**params)
-
-
 class UserRegistrationTestCase(APITestCase):
     def test_user_registration(self):
         registration_data = {
