@@ -3,10 +3,7 @@ Tests for the user API.
 """
 
 from rest_framework.test import APITestCase
-from django.contrib.auth import get_user_model
 from django.urls import reverse
-
-from rest_framework.test import APIClient
 from rest_framework import status
 
 class UserRegistrationTestCase(APITestCase):
@@ -31,5 +28,4 @@ class UserRegistrationTestCase(APITestCase):
         self.assertEqual(user['image'], '')
         self.assertIn('token', user)
         
-        # Add more assertions to test the response data, if needed.
 
